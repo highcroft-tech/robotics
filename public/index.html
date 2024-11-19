@@ -94,12 +94,12 @@
     document.addEventListener('DOMContentLoaded', function () {
       window.firebase?.analytics();
       window.firebase?.analytics().logEvent("tutorial_completed");
-      // foo
-      // window.firebase.database().ref('/name').on('value', (snapshot) => {
-      //   console.log("snapshot.val() = ", snapshot.val());
-      //   const name = snapshot.val() || 'not_set';
-      //   document.getElementById('welcome-name').textContent = name;
-      // });
+      // -----
+      window.firebase.database().ref('/data').on('value', (snapshot) => {
+        console.log("snapshot.val() = ", snapshot.val());
+        const name = snapshot.val() || 'not_set';
+        // document.getElementById('welcome-name').textContent = name;
+      });
     });
   </script>
 </body>
