@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  <!-- <link rel="icon" href="https://via.placeholder.com/70x70"> -->
   <link rel="stylesheet" href="./mvp.css">
   <link rel="stylesheet" href="./app.css">
   <meta charset="utf-8">
@@ -20,15 +19,20 @@
   </nav>
 
   <header>
-    <h2>Welcome to <a target="_blank" href="https://www.parkwayschools.net/highcroft">Highcroft Ridge Elementary</a>
-      Robotics Club</h2>
+    <h2>Build our own Text to Binary Converter</h2>
   </header>
 
   <section>
     <article>
-      <header>
-        <h3>This is a place for the team to be able to build and share cool things.</h3>
-      </header>
+      <p><a href="https://www.rapidtables.com/convert/number/ascii-to-binary.html" target="_blank">Here is an example of
+          one</a></p>
+      <img style="width: 100%;" src="binary.PNG">
+    </article>
+  </section>
+
+  <section>
+    <article>
+      <p>Let's build our own here :)</p>
     </article>
   </section>
 
@@ -36,20 +40,10 @@
     document.addEventListener('DOMContentLoaded', function () {
       window.firebase?.analytics();
       window.firebase?.analytics().logEvent("tutorial_completed");
-      // -----
-      window.firebase.database().ref('/data').on('value', (snapshot) => {
-        console.log("snapshot.val() = ", snapshot.val());
-        const name = snapshot.val() || 'not_set';
-        // document.getElementById('welcome-name').textContent = name;
-      });
     });
   </script>
   <script src="/__/firebase/11.0.2/firebase-app-compat.js"></script>
-  <!-- include only the Firebase features as you need -->
-  <!-- <script  src="/__/firebase/11.0.2/firebase-auth-compat.js"></script> -->
-  <script src="/__/firebase/11.0.2/firebase-database-compat.js"></script>
   <script src="/__/firebase/11.0.2/firebase-analytics-compat.js"></script>
-  <!-- set useEmulator to false to avoid connecting the SDK to running emulators. -->
   <script src="/__/firebase/init.js?useEmulator=true"></script>
 </body>
 
